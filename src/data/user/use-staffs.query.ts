@@ -7,13 +7,14 @@ import { API_ENDPOINTS } from "@utils/api/endpoints";
 const fetchStaffs = async ({ queryKey }: QueryParamsType) => {
   const [_key, params] = queryKey;
   const {
-    shop_id,
     page,
     text,
     limit = 15,
     orderBy = "updated_at",
     sortedBy = "DESC",
   } = params as QueryOptionsType;
+
+  const shop_id = 1;
   const url = `${API_ENDPOINTS.STAFFS}?search=${text}&shop_id=${shop_id}&limit=${limit}&page=${page}&orderBy=${orderBy}&sortedBy=${sortedBy}`;
   const {
     data: { data, ...rest },

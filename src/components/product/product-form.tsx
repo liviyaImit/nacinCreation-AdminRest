@@ -156,7 +156,7 @@ export default function CreateOrUpdateProductForm({ initialValues }: IProps) {
   const { data: shopData } = useShopQuery(router.query.shop as string, {
     enabled: !!router.query.shop,
   });
-  const shopId = shopData?.shop?.id!;
+  const shopId = 1;
   const methods = useForm<FormValues>({
     resolver: yupResolver(productValidationSchema),
     shouldUnregister: true,

@@ -30,7 +30,7 @@ const AddStaffForm = () => {
     query: { shop },
   } = router;
   const { data: shopData } = useShopQuery(shop as string);
-  const shopId = shopData?.shop?.id!;
+  const shopId = 1;
   const {
     register,
     handleSubmit,

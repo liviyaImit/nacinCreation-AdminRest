@@ -27,14 +27,14 @@ export default function StaffsPage() {
     shop as string
   );
 
-  const shopId = shopData?.shop?.id!;
+  const shopId = 1;
   const {
     data,
     isLoading: loading,
     error,
   } = useStaffsQuery(
     {
-      shop_id: Number(shopId),
+      shop_id: 1,
       page,
       orderBy,
       sortedBy,
@@ -80,7 +80,7 @@ export default function StaffsPage() {
           />
 
           <LinkButton
-            href={`/${shop}/staffs/create`}
+            href={`/clothing-shop/staffs/create`}
             className="h-12 ms-4 md:ms-6"
           >
             <span className="hidden md:block">

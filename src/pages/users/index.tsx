@@ -11,27 +11,47 @@ import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { ROUTES } from "@utils/routes";
 import SortForm from "@components/common/sort-form";
+import { useRouter } from "next/router";
+import { SortOrder } from "@ts-types/generated";
+import { useStaffsQuery } from "@data/shop/use-staffs.query";
+import { useShopQuery } from "@data/shop/use-shop.query";
 
 export default function Customers() {
-  const [searchTerm, setSearchTerm] = useState("");
-  const [page, setPage] = useState(1);
+  const {
+    query: { shop },
+  } = useRouter();
   const { t } = useTranslation();
+  const [page, setPage] = useState(1);
+  const [orderBy, setOrder] = useState("created_at");
+  const [sortedBy, setColumn] = useState<SortOrder>(SortOrder.Desc);
+
+  const { data: shopData, isLoading: fetchingShopId } = useShopQuery(
+    shop as string
+  );
+
+  const shopId = 1;
   const {
     data,
     isLoading: loading,
     error,
-  } = useUsersQuery({
-    limit: 20,
-    page,
-    text: searchTerm,
-  });
+  } = useStaffsQuery(
+    {
+      shop_id: 1,
+      page,
+      orderBy,
+      sortedBy,
+    },
+    {
+      enabled: Boolean(shopId),
+    }
+  );
+  if (fetchingShopId || loading)
+    return <Loader text={t("common:text-loading")} />;
+  if (error)
+    return (
+      <ErrorMessage message={error?.response?.data?.message || error.message} />
+    );
 
-  if (loading) return <Loader text={t("common:text-loading")} />;
-  if (error) return <ErrorMessage message={error.message} />;
-  function handleSearch({ searchText }: { searchText: string }) {
-    setSearchTerm(searchText);
-    setPage(1);
-  }
   function handlePagination(current: any) {
     setPage(current);
   }
@@ -73,9 +93,9 @@ export default function Customers() {
         </div>
       </Card>
 
-      {loading ?  (
+      {loading ? null : (
         <StaffList staffs={data?.staffs} onPagination={handlePagination} />
-      ): null}
+      )}
     </>
   );
 }

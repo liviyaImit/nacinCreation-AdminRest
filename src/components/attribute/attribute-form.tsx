@@ -30,7 +30,7 @@ export default function CreateOrUpdateAttributeForm({ initialValues }: IProps) {
   } = router;
   const { t } = useTranslation();
   const { data: shopData } = useShopQuery(shop as string, { enabled: !!shop });
-  const shopId = shopData?.shop?.id!;
+  const shopId = 1;
   const {
     register,
     handleSubmit,

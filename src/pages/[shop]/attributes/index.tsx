@@ -25,7 +25,7 @@ export default function AttributePage() {
   const { data: shopData, isLoading: fetchingShop } = useShopQuery(
     shop as string
   );
-  const shopId = shopData?.shop?.id!;
+  const shopId =1;
 
   const {
     data,

@@ -26,7 +26,7 @@ export default function Orders() {
   const { data: shopData, isLoading: fetchingShop } = useShopQuery(
     shop as string
   );
-  const shopId = shopData?.shop?.id!;
+  const shopId = 1;
   const [searchTerm, setSearchTerm] = useState("");
   const [page, setPage] = useState(1);
   const {

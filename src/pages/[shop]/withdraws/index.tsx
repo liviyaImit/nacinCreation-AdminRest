@@ -23,7 +23,7 @@ export default function WithdrawsPage() {
     query: { shop },
   } = useRouter();
   const { data: shopData } = useShopQuery(shop as string);
-  const shopId = shopData?.shop?.id!;
+  const shopId = 1;
 
   const {
     data,
