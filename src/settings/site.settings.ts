@@ -5,11 +5,11 @@ export const siteSettings = {
   name: "PickBazar",
   description: "",
   logo: {
-    url: "/logo.svg",
+    url: "/logo.png",
     alt: "PickBazar",
     href: "/",
-    width: 128,
-    height: 40,
+    width: 200,
+    height: 45,
   },
   defaultLanguage: "en",
   author: {
