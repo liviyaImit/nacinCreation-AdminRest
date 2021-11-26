@@ -26,9 +26,9 @@ export default function LoginPage() {
         <div className="flex justify-center mb-2">
           <Logo />
         </div>
-        <h3 className="text-center text-base italic text-body mb-6 mt-4">
+        {/* <h3 className="text-center text-base italic text-body mb-6 mt-4">
           {t("admin-login-title")}
-        </h3>
+        </h3> */}
         <LoginForm />
       </div>
     </div>
