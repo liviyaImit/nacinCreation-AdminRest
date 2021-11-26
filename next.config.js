@@ -12,17 +12,17 @@ module.exports = withPWA({
 
   images: {
     domains: [
-      "via.placeholder.com",
-      "res.cloudinary.com",
-      "s3.amazonaws.com",
-      "18.141.64.26",
+      // "via.placeholder.com",
+      // "res.cloudinary.com",
+      // "s3.amazonaws.com",
+      // "18.141.64.26",
       "127.0.0.1",
       "navin.imithosting.com",
       "localhost",
-      "picsum.photos",
-      "pickBazar-sail.test",
-      "pickbazarlaravel.s3.ap-southeast-1.amazonaws.com",
-      "lh3.googleusercontent.com",
+      // "picsum.photos",
+      // "pickBazar-sail.test",
+      // "pickbazarlaravel.s3.ap-southeast-1.amazonaws.com",
+      // "lh3.googleusercontent.com",
     ],
   },
   typescript: {
