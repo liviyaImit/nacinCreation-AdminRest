@@ -66,11 +66,11 @@ export const siteSettings = {
         label: "sidebar-nav-item-categories",
         icon: "CategoriesIcon",
       },
-      {
-        href: ROUTES.USERS,
-        label: "sidebar-nav-item-staffs",
-        icon: "UsersIcon",
-      },
+//       {
+//         href: ROUTES.USERS,
+//         label: "sidebar-nav-item-staffs",
+//         icon: "UsersIcon",
+//       },
       {
         href: ROUTES.TAGS,
         label: "sidebar-nav-item-tags",
