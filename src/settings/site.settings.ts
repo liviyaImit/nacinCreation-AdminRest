@@ -9,7 +9,7 @@ export const siteSettings = {
     alt: "PickBazar",
     href: "/",
     width: 200,
-    height: 45,
+    height: 50,
   },
   defaultLanguage: "en",
   author: {
