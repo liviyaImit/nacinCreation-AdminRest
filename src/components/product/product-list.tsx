@@ -36,8 +36,8 @@ const ProductList = ({ products, onPagination }: IProps) => {
       width: 74,
       render: (image: any, { name }: { name: string }) => (
         <Image
-          // src={image?.thumbnail ?? siteSettings.product.placeholder}
-          src='/bap.png'
+          src={image?.thumbnail ?? siteSettings.product.placeholder}
+          // src='/bap.png'
           alt={name}
           layout="fixed"
           width={42}
@@ -92,6 +92,7 @@ const ProductList = ({ products, onPagination }: IProps) => {
       key: "price",
       align: alignRight,
       width: 100,
+      
       render: (value: number, record: Product) => {
         if (record?.product_type === ProductType.Variable) {
           const { price: max_price } = usePrice({
@@ -113,10 +114,14 @@ const ProductList = ({ products, onPagination }: IProps) => {
           return (
             <span className="whitespace-nowrap" title={price}>
               {price}
+              {console.log("price",price)}
             </span>
           );
         }
       },
+
+      
+
     },
     {
       title: t("table:table-item-quantity"),

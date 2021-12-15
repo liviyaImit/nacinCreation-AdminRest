@@ -17,6 +17,7 @@ const getPreviewImage = (value: any) => {
 export default function Uploader({ onChange, value, multiple }: any) {
   const { t } = useTranslation();
   const [files, setFiles] = useState<Attachment[]>(getPreviewImage(value));
+  // {console.log(files)};
   const { mutate: upload, isLoading: loading } = useUploadMutation();
   const { getRootProps, getInputProps } = useDropzone({
     accept: "image/*",
@@ -54,7 +55,11 @@ export default function Uploader({ onChange, value, multiple }: any) {
     }
   };
   const thumbs = files?.map((file: any, idx) => {
-    if (file.id) {
+
+    // {console.log("id",file.id)}
+   
+    if(file.id!=null)
+    {
       return (
         <div
           className="inline-flex flex-col overflow-hidden border border-border-200 rounded mt-2 me-2 relative"
@@ -73,7 +78,10 @@ export default function Uploader({ onChange, value, multiple }: any) {
           ) : null}
         </div>
       );
+
     }
+      
+    
   });
 
   useEffect(
