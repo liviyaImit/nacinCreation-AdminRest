@@ -1,8 +1,7 @@
 {
   "build": {
     "env": {
-      "NEXT_PUBLIC_REST_API_ENDPOINT": "https://navin.imithosting.com",
-      "NEXT_PUBLIC_SHOP_URL": "https://navin-creation-admin-rest-liviyaimit.vercel.app"
+      "NEXT_PUBLIC_REST_API_ENDPOINT": "https://navin.imitpark.co.in/"
     }
   }
 }
