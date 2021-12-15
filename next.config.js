@@ -18,7 +18,8 @@ module.exports = withPWA({
       // "18.141.64.26",
       "127.0.0.1",
       "localhost",
-      "navin.imitpark.co.in"
+      "navin.imitpark.co.in",
+      "res.cloudinary.com"
       // "picsum.photos",
       // "pickBazar-sail.test",
       // "pickbazarlaravel.s3.ap-southeast-1.amazonaws.com",
