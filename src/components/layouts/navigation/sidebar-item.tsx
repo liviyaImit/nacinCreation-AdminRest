@@ -14,6 +14,7 @@ const SidebarItem = ({ href, icon, label }: any) => {
       })}
       {label}
     </Link>
+   
   );
 };
 

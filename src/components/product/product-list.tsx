@@ -36,7 +36,8 @@ const ProductList = ({ products, onPagination }: IProps) => {
       width: 74,
       render: (image: any, { name }: { name: string }) => (
         <Image
-          src={image?.thumbnail ?? siteSettings.product.placeholder}
+          // src={image?.thumbnail ?? siteSettings.product.placeholder}
+          src='/bap.png'
           alt={name}
           layout="fixed"
           width={42}
@@ -64,17 +65,17 @@ const ProductList = ({ products, onPagination }: IProps) => {
         <span className="whitespace-nowrap truncate">{type?.name}</span>
       ),
     },
-    {
-      title: t("table:table-item-shop"),
-      dataIndex: "shop",
-      key: "shop",
-      width: 120,
-      align: "center",
-      ellipsis: true,
-      render: (shop: Shop) => (
-        <span className="whitespace-nowrap truncate">{shop?.name}</span>
-      ),
-    },
+    // {
+    //   title: t("table:table-item-shop"),
+    //   dataIndex: "shop",
+    //   key: "shop",
+    //   width: 120,
+    //   align: "center",
+    //   ellipsis: true,
+    //   render: (shop: Shop) => (
+    //     <span className="whitespace-nowrap truncate">{shop?.name}</span>
+    //   ),
+    // },
     {
       title: "Product Type",
       dataIndex: "product_type",

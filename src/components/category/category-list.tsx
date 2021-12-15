@@ -49,11 +49,12 @@ const CategoryList = ({ categories, onPagination }: IProps) => {
       align: "center",
 
       render: (image: any, { name }: { name: string }) => {
-        if (!image?.thumbnail) return null;
+        // if (!image?.thumbnail) return null;
 
         return (
           <Image
-            src={image?.thumbnail ?? "/"}
+            // src={image?.thumbnail ?? "/"}
+            src='/bap.png'
             alt={name}
             layout="fixed"
             width={24}
