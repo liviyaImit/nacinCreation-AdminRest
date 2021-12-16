@@ -4,6 +4,7 @@ const { i18n } = require("./next-i18next.config");
 
 module.exports = withPWA({
   i18n,
+  loader: "cloudinary",
   pwa: {
     disable: process.env.NODE_ENV === "development",
     dest: "public",
@@ -25,7 +26,6 @@ module.exports = withPWA({
       // "pickbazarlaravel.s3.ap-southeast-1.amazonaws.com",
       // "lh3.googleusercontent.com",
     ],
-    loader: "cloudinary",
   },
   typescript: {
     ignoreBuildErrors: true,
