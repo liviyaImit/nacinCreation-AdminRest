@@ -113,7 +113,7 @@ const ProductList = ({ products, onPagination }: IProps) => {
           });
           return (
             <span className="whitespace-nowrap" title={price}>
-              {price}
+              {value}
               {console.log("price",price)}
             </span>
           );
