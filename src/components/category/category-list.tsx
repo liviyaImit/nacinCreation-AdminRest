@@ -53,8 +53,8 @@ const CategoryList = ({ categories, onPagination }: IProps) => {
 
         return (
           <Image
-            // src={image?.thumbnail ?? "/"}
-            src='/bap.png'
+            src={image?.thumbnail ?? "/"}
+            //src='/bap.png'
             alt={name}
             layout="fixed"
             width={24}
