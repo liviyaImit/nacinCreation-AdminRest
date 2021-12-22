@@ -65,6 +65,7 @@ const CouponList = ({ coupons, onPagination }: IProps) => {
       align: "center",
       width: 132,
       render: (amount: number, record: any) => {
+        console.log("amount",amount);
         const { price } = usePrice({
           amount: amount,
         });
