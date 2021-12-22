@@ -66,13 +66,13 @@ const CouponList = ({ coupons, onPagination }: IProps) => {
       width: 132,
       render: (amount: number, record: any) => {
         console.log("amount",amount);
-        const { price } = usePrice({
-          amount: amount,
-        });
+//         const { price } = usePrice({
+//           amount: amount,
+//         });
         if (record.type === "PERCENTAGE_COUPON") {
-          return <span>amount%</span>;
+          return <span>{amount}%</span>;
         }
-        return <span>amount</span>;
+        return <span>₹{amount}</span>;
       },
     },
     {
