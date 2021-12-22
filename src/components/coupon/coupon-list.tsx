@@ -69,7 +69,7 @@ const CouponList = ({ coupons, onPagination }: IProps) => {
           amount: amount,
         });
         if (record.type === "PERCENTAGE_COUPON") {
-          return <span>{amount}%</span>;
+          return <span>{coupons.amount}%</span>;
         }
         return <span>{price}</span>;
       },
