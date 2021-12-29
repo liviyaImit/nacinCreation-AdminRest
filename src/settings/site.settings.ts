@@ -86,11 +86,11 @@ export const siteSettings = {
         label: "sidebar-nav-item-order-status",
         icon: "OrdersStatusIcon",
       },
-      {
-        href: ROUTES.COUPONS,
-        label: "sidebar-nav-item-coupons",
-        icon: "CouponsIcon",
-      },
+      //{
+        //href: ROUTES.COUPONS,
+        //label: "sidebar-nav-item-coupons",
+        //icon: "CouponsIcon",
+      //},
       {
         href: ROUTES.TAXES,
         label: "sidebar-nav-item-taxes",
