@@ -1,7 +1,7 @@
 {
   "build": {
     "env": {
-      "NEXT_PUBLIC_REST_API_ENDPOINT": "https://navin.imitpark.co.in/"
+      "NEXT_PUBLIC_REST_API_ENDPOINT": "https://gitdr.com/"
     }
   }
 }
